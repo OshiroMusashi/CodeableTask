@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Fundamentals Evaluation - Manipulación DOM</title>
+  <link rel="stylesheet" href="styles/estilos.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html">
+        <img src="assets/images/codeable-logo-sm.svg" alt="codeable-logo" width="135" height="32"
+          class="header__logo" />
+      </a>
+      <nav class="navigation">
+        <ul>
+          <li><a href="diagramas.html">Diagramas VV</a></li>
+          <li><a href="funciones.html">Funciones</a></li>
+          <li class="active"><a href="dom.html">Manipulación del DOM</a></li>
+        </ul>
+      </nav>
+      <p class="header__name">Grimarey Oshiro</p>
+    </div>
+  </header>
+  <main class="">
+    <section class="contenedor">
+      <div class="subcontenedor">
+        <h1 class="titulo">Manipulación del DOM</h1>
+        <h2 class="subtitulo">Instrucciones</h2>
+        <p class="descripcion" style="padding-bottom: 20px;">Sigue las instrucciones y crea componentes web utilizando
+          JavaScript, manipulando el DOM, escuchando eventos e implementando persistencia con localStorage.</p>
+      </div>
+      <div class="subcontenedor">
+        <h2 class="subtitulo">Crea un 'Tooltip'</h2>
+        <p class="descripcion">Un Tooltip es un pequeño cuadro de información que aparece cuando pasas el cursor sobre
+          un elemento en una interfaz gráfica de usuario. Este cuadro ofrece detalles adicionales sobre la función del
+          elemento, proporcionando así una ayuda contextual. Por ejemplo, si pasas el cursor sobre un botón que guarda
+          cambios en una aplicación, un Tooltip podría aparecer con el texto "Guardar", para clarificar qué hace ese
+          botón. Los Tooltips son útiles para mejorar la experiencia del usuario, ya que proporcionan orientación sin
+          requerir que se desplace a otra sección para obtener más información.</p>
+        <h3 class="temas" style="padding-top: 30px;">Requerimiento</h3>
+        <p class="descripcion">Tu tarea es crear un Tooltip, un pequeño elemento emergente que proporciona información
+          adicional cuando el usuario pasa el cursor sobre un elemento. Utilizarás JavaScript para manipular el DOM y
+          crear este componente.</p>
+        <ul class="lista">
+          <li class="elemento"><span class="negrita">Elemento Objetivo:</span> El elemento sobre el cual aparecerá el
+            Tooltip será cualquier elemento que tenga un atributo `data-tooltip` definido.</li>
+          <li class="elemento"><span class="negrita">Contenido del Tooltip:</span> El valor del atributo será el mensaje
+            que aparecerá en el Tooltip. Por ejemplo, un elemento con el atributo `data-tooltip="Grabar"` mostrará el
+            texto "Grabar" como contenido del Tooltip.</li>
+          <li class="elemento"><span class="negrita">Posicionamiento:</span> El Tooltip debe aparecer encima del
+            elemento objetivo.</li>
+          <li class="elemento"><span class="negrita">Estilo:</span> Sigue el diseño especificado en Figma para dar
+            estilo al Tooltip</li>
+          <li class="elemento"><span class="negrita">Interacción:</span> El Tooltip debe mostrarse cuando el usuario
+            pase el cursor sobre el elemento objetivo y desaparecer cuando el cursor se mueva fuera del elemento. Pero
+            no lo debe hacer inmediato. El mouse debe mantenerse por encima del elemento objetivo durante 300ms para
+            luego mostrar el Tooltip. Si el cursor sale del elemento objetivo antes de cumplirse los 300ms, el Tooltip
+            no debe mostrarse.</li>
+        </ul>
+        <h3 class="temas">Demo</h3>
+        <p class="descripcion">A continuación, presenta una demostración del Tooltip.</p>
+        <div class="estructura">
+          <div>&lt;button data-tooltip="¡Funciona! 😄"&gt;Tooltip&lt;/button&gt;</div>
+        </div>
+        <div class="contenido_demo">
+          <button data-tooltip="¡Funciona! 😄" class="tooltip-btn">Tooltip</button>
+          <script src="tooltip.js"></script>
+        </div>
+      </div>
+      <div class="subcontenedor">
+        <h2 class="subtitulo">Crea un Formulario con Validación en tiempo real</h2>
+        <p class="descripcion">El objetivo de este ejercicio es crear un formulario HTML que realice validaciones en
+          tiempo real utilizando JavaScript, persista el progreso usando localStorage y procese el envío usando
+          JavaScript para mostrar un mensaje con la respuesta del servidor.</p>
+        <h3 class="temas" style="padding-top: 30px;">Requerimiento</h3>
+        <h4 class="subtemas">Campos del formulario:</h4>
+        <ul class="lista">
+          <li class="elemento"><span class="negrita">Nombre:</span> Un input obligatorio</li>
+          <li class="elemento"><span class="negrita">Apodo:</span> Un input obligatorio de entre 3 y 10 caracteres. Solo
+            debe aceptar caracteres alfanuméricos. Estos son letras (a-z) o (A-Z), dígitos (0-9).</li>
+          <li class="elemento"><span class="negrita">Biografía:</span> Textarea opcional, pero si se llena, deberá tener
+            mínimo 100 caracteres.</li>
+          <li class="elemento"><span class="negrita">Contraseña:</span> Un input obligatorio de mínimo 8 caracteres, al
+            menos una letra mayúscula y un número.</li>
+        </ul>
+        <h4 class="subtemas">Validación en Tiempo Real</h4>
+        <ul class="lista">
+          <li class="elemento">Valida el contenido de cada campo inmediatamente cuando el usuario comienza a escribir en
+            él.</li>
+          <li class="elemento">Muestra un mensaje de error debajo del campo cuando no pasa la validación.</li>
+          <li class="elemento">El mensaje de error debe desaparecer cuando el campo sea válido.</li>
+        </ul>
+        <h4 class="subtemas">Persistencia</h4>
+        <ul class="lista">
+          <li class="elemento">Guarda el progreso del usuario en el `localStorage` cada vez que se valide un campo (no
+            queremos guardar datos inválidos)</li>
+          <li class="elemento">Al recargar la página, el formulario debe recuperar el estado guardado del
+            `localStorage`.</li>
+          <li class="elemento">El campo Contraseña contiene datos sensibles por lo tanto no debe almacenarse en
+            `localStorage`</li>
+        </ul>
+        <h4 class="subtemas">Persistencia</h4>
+        <ul class="lista">
+          <li class="elemento">El botón para enviar el formulario debe estar deshabilitado hasta que todos los campos
+            sean válidos.</li>
+          <li class="elemento">Al hacer clic en enviar, simula una petición al servidor utilizando JavaScript. El método
+            debe ser POST, la URL será el servicio echo '​https://mocktarget.apigee.net/echo'. Deberá tener el header
+            Content-Type adecuado.</li>
+          <li class="elemento">Luego de procesar la respuesta, añade un elemento debajo del formulario que muestre la
+            respuesta del servidor en formato JSON.</li>
+        </ul>
+        <h3 class="temas">Demo</h3>
+        <p class="descripcion">A continuación, presenta una demostración del Formulario con validación.</p>
+        <div class="estructura">
+          <div><!-- código del formulario aquí --></div>
+        </div>
+        <div class="contenido_demo">
+          <div class="contenedor_formulario">
+            <form id="userForm" class="formulario">
+              <div class="contenedor_campos">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="campo" id="nombre" name="nombre" required>
+                <span class="error" id="nombreError"></span>
+              </div>
+              <div class="contenedor_campos">
+                <label for="apodo">Apodo</label>
+                <input type="text" class="campo" id="apodo" name="apodo" required pattern="[a-zA-Z0-9]{3,10}">
+                <span class="error" id="apodoError">Entre 3 y 10 caracteres alfanuméricos</span>
+              </div>
+              <div class="contenedor_campos">
+                <label for="biografia">Biografía</label>
+                <textarea class="campo" id="biografia" name="biografia"></textarea>
+                <span class="error" id="biografiaError">Mínimo 100 caracteres</span>
+              </div>
+              <div class="contenedor_campos">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" class="campo" id="contrasena" name="contrasena" required>
+                <span class="error" id="contrasenaError">Mínimo 8 caracteres, al menos una letra mayúscula y un
+                  número</span>
+              </div>
+              <button type="submit" class="boton_formulario" id="submitButton" disabled>Enviar</button>
+            </form>
+            <div id="serverResponse" class="respuesta">
+              <pre><code id="responseCode"></code></pre>
+            </div>
+            <script src="formulario.js"></script>
+          </div>
+        </div>
+    </section>
+  </main>
+</body>
+
+</html>

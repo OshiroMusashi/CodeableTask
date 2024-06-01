@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600&family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;600&display=swap");
+
+/* 1. Settings */
+@import url(1-settings/border.css);
+@import url(1-settings/color.css);
+@import url(1-settings/spacing.css);
+@import url(1-settings/typography.css);
+@import url(1-settings/width.css);
+
+/* 2. Generic */
+@import url(2-generic/reset.css);
+
+/* 3. Elements */
+@import url(3-elements/elements.css);
+
+/* 4. Objects */
+@import url(4-objects/objects.css);
+
+/* 5. Components */
+
+/* Atoms */
+@import url(5-components/button.css);
+@import url(5-components/link.css);
+
+/* Molecules */
+@import url(5-components/navigation.css);
+@import url(5-components/header.css);
+@import url(5-components/home.css);
+
+/* 6. Utilities */
+@import url(6-utilities/utilities.css);
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+.subcontenedor {
+    width: 60%;
+    max-width: 650px;
+    padding: 15px 0;
+}
+
+.titulo {
+    font-size: 35px;
+    font-weight: 900;
+    padding-bottom: 50px;
+}
+
+.subtitulo {
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+
+.temas {
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 25px;
+}
+
+.temas2 {
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 30px;
+}
+
+.subtemas {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.descripcion_img {
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+.descripcion {
+    font-size: 15px;
+}
+
+.negrita {
+    font-weight: 600;
+}
+
+.test {
+    text-decoration: none;
+    color: #6D28D9;
+    font-weight: 800;
+}
+
+.lista {
+    list-style-type: disc;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    font-size: 15px;
+}
+
+.lista li::marker {
+    color: #6D28D9;
+}
+
+.elemento {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.estructura {
+    background-color: #171717;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 10px 20px;
+    white-space: pre-line;
+    font-size: 12px;
+    line-height: 0.8;
+    margin: 25px 0;
+}
+
+.datos {
+    margin-left: 20px;
+}
+
+.datos_secundarios {
+    margin-left: 40px;
+}
+
+.datos_terciarios {
+    margin-left: 60px;
+}
+
+form {
+    padding-top: 25px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+label input {
+    margin-right: 10px;
+}
+
+.contenido_demo {
+    background-color: #F5F5F5;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 60px 0;
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.tooltip-btn {
+    background-color: #6D28D9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    /* Añadir esto para que el tooltip sea posicionado relativo al botón */
+}
+
+[data-tooltip] {
+    position: relative;
+    /* Para asegurar que el tooltip se posicione relativo al elemento */
+    cursor: pointer;
+    /* Opcional, si quieres cambiar el cursor */
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 115px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px 10px;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s;
+    opacity: 0;
+    font-size: 14px;
+    transform: translateX(-50%);
+    bottom: 100%;
+    /* Posicionar el tooltip arriba del botón */
+    left: 50%;
+    margin-bottom: 10px;
+    /* Ajustar el espacio entre el botón y el tooltip */
+}
+
+[data-tooltip]:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.contenedor_formulario {
+    width: 100%;
+}
+
+.formulario {
+    max-width: 350px;
+    margin: auto;
+    padding: 1em;
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.contenedor_campos {
+    margin-bottom: 1em;
+}
+
+.contenedor_campos label {
+    margin-bottom: .5em;
+    color: #333333;
+    display: block;
+}
+
+.campo {
+    border: 1px solid #CCCCCC;
+    padding: .5em;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+.campo[type="textarea"] {
+    resize: vertical;
+    height: 100px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.boton_formulario {
+    width: 100%;
+    padding: 0.6em;
+    color: #fff;
+    background-color: #6D28D9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.boton_formulario:disabled {
+    background-color: #CCCCCC;
+    cursor: not-allowed;
+}
+
+.error {
+    color: #DC2626;
+    font-size: 0.8em;
+    font-weight: 400;
+    display: none;
+}
+
+.respuesta {
+    display: none;
+    background-color: #FFFFFF;
+    color: #000;
+    padding: 15px;
+    margin: 15px 15px 0 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}

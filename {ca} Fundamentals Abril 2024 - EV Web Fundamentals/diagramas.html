@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Fundamentals Evaluation - Diagramas VV</title>
+  <link rel="stylesheet" href="styles/estilos.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html">
+        <img src="assets/images/codeable-logo-sm.svg" alt="codeable-logo" width="135" height="32"
+          class="header__logo" />
+      </a>
+      <nav class="navigation">
+        <ul>
+          <li class="active"><a href="diagramas.html">Diagramas VV</a></li>
+          <li><a href="funciones.html">Funciones</a></li>
+          <li><a href="dom.html">Manipulación del DOM</a></li>
+        </ul>
+      </nav>
+      <p class="header__name">Grimarey Oshiro</p>
+    </div>
+  </header>
+  <main class="">
+    <section class="contenedor">
+      <div class="subcontenedor">
+        <h1 class="titulo">Diagramas VV</h1>
+        <h2 class="subtitulo">Instrucciones</h2>
+        <p class="descripcion">Dibuja el estado del diagrama de variables y valores para cada momento indicado por el
+          ejercicio. Añade una
+          imagen del diagrama al documento. El diagrama deberá contener únicamente las variables y valores que
+          permanecen en la memoria. Luego contesta las preguntas dejando marcado (checked) el radio button o el/los
+          checkboxes correspondientes.</p>
+      </div>
+      <div class="subcontenedor">
+        <h2 class="subtitulo">Ejercicios</h2>
+        <h3 class="temas">Ejercicio 1</h3>
+        <p class="descripcion">Analiza el siguiente código y dibuja el diagrama VV al terminar de ejecutarse</p>
+        <div class="estructura">
+          <div>const juan = {</div>
+          <div class="datos">nombre: "Juan",</div>
+          <div class="datos">edad: 25,</div>
+          <div class="datos">residencia: {</div>
+          <div class="datos_secundarios">direccion: "Loma Hermosa 240",</div>
+          <div class="datos_secundarios">ciudad: "Lima",</div>
+          <div class="datos_secundarios">pais: "Peru",</div>
+          <div class="datos">},</div>
+          <div>};</div>
+          <br>
+          <div>const sandra = {</div>
+          <div class="datos">nombre: "Sandra",</div>
+          <div class="datos">edad: 25,</div>
+          <div class="datos">residencia: {</div>
+          <div class="datos_secundarios">direccion: "Loma Hermosa 240",</div>
+          <div class="datos_secundarios">ciudad: "Lima",</div>
+          <div class="datos_secundarios">pais: "Peru",</div>
+          <div class="datos">},</div>
+          <div>};</div>
+        </div>
+        <img src="assets/images/diagrama1.png" alt="">
+        <h5 class="descripcion_img">Diagrama al final de la ejecución</h5>
+        <form>
+          <p class="descripcion">La expresión `juan.edad === sandra.edad` retorna</p>
+          <label>
+            <input type="radio" name="" value="true" checked> true
+          </label>
+          <label>
+            <input type="radio" name="" value="false"> false
+          </label>
+          <br>
+          <p class="descripcion">La expresión `juan.residencia === sandra.residencia` retorna</p>
+          <label>
+            <input type="radio" name="" value="true"> true
+          </label>
+          <label>
+            <input type="radio" name="" value="false" checked> false
+          </label>
+          <br>
+          <p class="descripcion">La expresión `juan.residencia.ciudad === sandra.residencia.ciudad` retorna</p>
+          <label>
+            <input type="radio" name="" value="true" checked> true
+          </label>
+          <label>
+            <input type="radio" name="" value="false"> false
+          </label>
+        </form>
+      </div>
+      <div class="subcontenedor">
+        <h3 class="temas">Ejercicio 2</h3>
+        <p class="descripcion">Analiza el siguiente código y dibuja el diagrama VV al terminar de ejecutarse</p>
+        <div class="estructura">
+          <div>const objeto1 = {};</div>
+          <div>const objeto2 = { b: 5 };</div>
+          <div>const objeto3 = { a: 10 };</div>
+          <br>
+          <div>objeto1.a = objeto3.a;</div>
+          <div>objeto2.a = objeto1.a + 5;</div>
+          <div>objeto3.b = objeto1.b;</div>
+          <div>objeto1.b = 10;</div>
+        </div>
+        <img src="assets/images/diagrama2.png" alt="">
+        <h5 class="descripcion_img">Diagrama al final de la ejecución</h5>
+        <form>
+          <p class="descripcion">La expresión `objeto1.a + objeto2.b === objeto2.a` retorna</p>
+          <label>
+            <input type="radio" name="" value="true" checked> true
+          </label>
+          <label>
+            <input type="radio" name="" value="false"> false
+          </label>
+          <br>
+          <p class="descripcion">El valor de `objeto3.b` es</p>
+          <label>
+            <input type="radio" name="" value=""> 5
+          </label>
+          <label>
+            <input type="radio" name="" value=""> 10
+          </label>
+          <label>
+            <input type="radio" name="" value=""> null
+          </label>
+          <label>
+            <input type="radio" name="" value="" checked> undefined
+          </label>
+          <label>
+            <input type="radio" name="" value=""> Error
+          </label>
+          <br>
+          <p class="descripcion">La expresión `objeto1.a === objeto1.b` retorna</p>
+          <label>
+            <input type="radio" name="" value="true" checked> true
+          </label>
+          <label>
+            <input type="radio" name="" value="false"> false
+          </label>
+        </form>
+      </div>
+      <div class="subcontenedor">
+        <h3 class="temas">Ejercicio 3</h3>
+        <p class="descripcion">Analiza el siguiente código y dibuja un diagrama VV para cada uno de los momentos
+          indicados. Recuerda que una función es un valor representado por el símbolo `( )`. No es necesario escribir el
+          contenido de la función en el diagrama.</p>
+        <div class="estructura">
+          <div>function agregar(arreglo, valor) {</div>
+          <div class="datos">return arreglo.push(valor);</div>
+          <div>};</div>
+          <br>
+          <div>const frutas = ["pera", "manzana"];</div>
+          <br>
+          <div>const resultado = agregar(frutas, "durazno");</div>
+          <br>
+          <div>// Punto A: dibuja el diagrama en este punto</div>
+          <br>
+          <div>const copia = frutas;</div>
+          <br>
+          <div>agregar(copia, "platano");</div>
+          <br>
+          <div>// Punto B: dibuja el diagrama en este punto</div>
+        </div>
+        <img src="" alt="">
+        <h5 class="descripcion_img">Diagrama en punto A</h5>
+        <img src="" alt="">
+        <h5 class="descripcion_img">Diagrama en punto B</h5>
+        <form>
+          <p class="descripcion">El valor de resultado `resultado` es</p>
+          <label>
+            <input type="radio" name="" value=""> ['pera', 'manzana', 'durazno']
+          </label>
+          <label>
+            <input type="radio" name="" value=""> 'durazno'
+          </label>
+          <label>
+            <input type="radio" name="" value="" checked> 3
+          </label>
+          <label>
+            <input type="radio" name="" value=""> 4
+          </label>
+          <br>
+          <p class="descripcion">El valor de `frutas.length` en el Punto B es</p>
+          <label>
+            <input type="radio" name="" value=""> 2
+          </label>
+          <label>
+            <input type="radio" name="" value=""> 3
+          </label>
+          <label>
+            <input type="radio" name="" value="" checked> 4
+          </label>
+          <label>
+            <input type="radio" name="" value=""> undefined
+          </label>
+        </form>
+      </div>
+      <div class="subcontenedor">
+        <h3 class="temas">Ejercicio 4</h3>
+        <p class="descripcion">Analiza el siguiente código y dibuja un diagrama VV al finalizar la ejecución. Recuerda
+          que una función es un valor representado por el símbolo `( )`. No es necesario escribir el contenido de la
+          función en el diagrama.</p>
+        <div class="estructura">
+          <div>function Persona(nombre) {</div>
+          <div class="datos">this.nombre = nombre;</div>
+          <div>};</div>
+          <br>
+          <div>Persona.prototype.presentarse = function () {</div>
+          <div class="datos">return `Hola, mi nombre es ${this.nombre}`;</div>
+          <div>};</div>
+          <br>
+          <div>function Mago(nombre, casa) {</div>
+          <div class="datos">Persona.call(this, nombre);</div>
+          <div class="datos">this.casa = casa;</div>
+          <div>};</div>
+          <br>
+          <div>Mago.prototype = Object.create(Persona.prototype);</div>
+          <div>Mago.prototype.constructor = Mago;</div>
+          <br>
+          <div>Mago.prototype.invocarHechizo = function () {</div>
+          <div class="datos">return `${this.nombre} invoca un hechizo`;</div>
+          <div>};</div>
+          <br>
+          <div>const petunia = new Persona("Petunia");</div>
+          <div>const harry = new Mago("Harry", "Gryffindor");</div>
+        </div>
+        <img src="" alt="">
+        <h5 class="descripcion_img">Diagrama al final de la ejecución</h5>
+        <form>
+          <p class="descripcion">Marca todas las correctas</p>
+          <label>
+            <input type="checkbox" name="harry" value="" checked> `Persona` y `Mago` son funciones constructoras
+          </label>
+          <label>
+            <input type="checkbox" name="harry" value=""> El prototipo de `harry` es `petunia`
+          </label>
+          <label>
+            <input type="checkbox" name="harry" value="" checked> Los objetos creado con la función `Mago` tienen acceso al
+            método `presentarse`
+          </label>
+          <label>
+            <input type="checkbox" name="harry" value=""> El uso de la palabra `new` es opcional
+          </label>
+          <label>
+            <input type="checkbox" name="harry" value="" checked> Solo el objeto `harry` tiene acceso al método `invocarHechizo`
+          </label>
+          <br>
+          <p class="descripcion">`harry` es una instancia de `Persona`</p>
+          <label>
+            <input type="radio" name="" value="true" checked> true
+          </label>
+          <label>
+            <input type="radio" name="" value="false"> false
+          </label>
+          <br>
+          <p class="descripcion">La expresión `harry.invocarHechizo.call(petunia)` retorna</p>
+          <label>
+            <input type="radio" name="" value=""> 'Harry invoca un hechizo'
+          </label>
+          <label>
+            <input type="radio" name="" value="" checked> 'Petunia invoca un hechizo'
+          </label>
+          <label>
+            <input type="radio" name="" value=""> Error
+          </label>
+        </form>
+        <br>
+        <p class="descripcion">Re-escribe el código usando la sintaxis de Clases de JavaScript</p>
+        <div class="estructura" style="margin-bottom: 0;">
+          <div>class Persona {</div>
+          <div class="datos">constructor(nombre) {</div>
+          <div class="datos_secundarios">this.nombre = nombre;</div>
+          <div class="datos">}</div>
+          <br>
+          <div class="datos">presentarse() {</div>
+          <div class="datos_secundarios">return `Hola, mi nombre es ${this.nombre}`;</div>
+          <div class="datos">}</div>
+          <div>}</div>
+          <br>
+          <div>class Mago extends Persona {</div>
+          <div class="datos">constructor(nombre, casa) {</div>
+          <div class="datos_secundarios">super(nombre);</div>
+          <div class="datos_secundarios">this.casa = casa;</div>
+          <div class="datos">}</div>
+          <br>
+          <div class="datos">invocarHechizo() {</div>
+          <div class="datos_secundarios">return `${this.nombre} invoca un hechizo`;</div>
+          <div class="datos">}</div>
+          <div>}</div>
+          <br>
+          <div>const petunia = new Persona("Petunia");</div>
+          <div>const harry = new Mago("Harry", "Gryffindor");</div> 
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
